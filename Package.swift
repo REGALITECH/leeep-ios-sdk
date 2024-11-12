@@ -10,7 +10,8 @@ let package = Package(
             targets: ["leeep-ios-sdk"]),
     ],
     targets: [
-        .target(
-            name: "leeep-ios-sdk"),
+        .binaryTarget(
+            name: "leeep-ios-sdk",
+            path: "./leeep-ios-sdk.xcframework"),
     ]
 )
