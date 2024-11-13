@@ -1,0 +1,62 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target x86_64-apple-ios18.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name LeeepIosSdk
+@_exported import LeeepIosSdk
+import Swift
+import SwiftUI
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct Leeep {
+  public static let Analytics: LeeepIosSdk.LeeepAnalytics
+  public static var showLog: Swift.Bool
+  public static func setup(websiteId: Swift.String)
+  public static func setUserId(_ userId: Swift.String?)
+}
+public struct LeeepAnalytics {
+  public func viewPage()
+  public func viewItem(productId: Swift.String)
+  public func viewTag(tagId: Swift.String)
+  public func viewPost(postId: Swift.String)
+  public func clickItem(tagId: Swift.String, postId: Swift.String, productId: Swift.String)
+  public func order(_ order: LeeepIosSdk.LeeepOrder)
+}
+@_Concurrency.MainActor @preconcurrency public struct LeeepTagView : SwiftUI.UIViewRepresentable {
+  @_Concurrency.MainActor @preconcurrency public init(tagId: Swift.String, productId: Swift.String? = nil, brandCode: Swift.String? = nil, postId: Swift.String? = nil, staffId: Swift.String? = nil, onTapLink: LeeepIosSdk.LeeepLinkHandler? = nil)
+  @_Concurrency.MainActor @preconcurrency public func makeUIView(context: LeeepIosSdk.LeeepTagView.Context) -> some UIKit.UIView
+  
+  @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: @_opaqueReturnTypeOf("$s11LeeepIosSdk0A7TagViewV10makeUIView7contextQr7SwiftUI0G20RepresentableContextVyACG_tF", 0) __, context: LeeepIosSdk.LeeepTagView.Context)
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public typealias Body = Swift.Never
+  @available(iOS 13.0, tvOS 13.0, *)
+  @available(watchOS, unavailable)
+  @available(macOS, unavailable)
+  public typealias Coordinator = Swift.Void
+  @available(iOS 13.0, tvOS 13.0, *)
+  @available(watchOS, unavailable)
+  @available(macOS, unavailable)
+  public typealias UIViewType = @_opaqueReturnTypeOf("$s11LeeepIosSdk0A7TagViewV10makeUIView7contextQr7SwiftUI0G20RepresentableContextVyACG_tF", 0) __
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class LeeepTagViewUIKit : UIKit.UIView, WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor @preconcurrency public init(tagId: Swift.String, productId: Swift.String? = nil, brandCode: Swift.String? = nil, postId: Swift.String? = nil, staffId: Swift.String? = nil, onTapLink: LeeepIosSdk.LeeepLinkHandler? = nil)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction) async -> WebKit.WKNavigationActionPolicy
+}
+public enum LeeepHandlerParam {
+  case post(id: Swift.String, url: Foundation.URL)
+  case staff(id: Swift.String, url: Foundation.URL)
+  case product(id: Swift.String, url: Foundation.URL)
+  case other(url: Foundation.URL)
+}
+public typealias LeeepLinkHandler = (LeeepIosSdk.LeeepHandlerParam) -> ()
+public struct LeeepOrder {
+  public init(orderId: Swift.String, products: [LeeepIosSdk.LeeepOrderProduct], discountAmount: Swift.Int)
+}
+public struct LeeepOrderProduct {
+  public init(productId: Swift.String, skuCode: Swift.String, salesPrice: Swift.Int, quantity: Swift.Int, name: Swift.String)
+}
+extension LeeepIosSdk.LeeepTagView : Swift.Sendable {}

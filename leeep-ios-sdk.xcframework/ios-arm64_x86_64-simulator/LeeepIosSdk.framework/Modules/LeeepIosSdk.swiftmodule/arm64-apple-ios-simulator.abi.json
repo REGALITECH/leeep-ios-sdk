@@ -1,0 +1,1561 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "LeeepIosSdk",
+    "printedName": "LeeepIosSdk",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "LeeepIosSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "LeeepIosSdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Leeep",
+        "printedName": "Leeep",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "Analytics",
+            "printedName": "Analytics",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LeeepAnalytics",
+                "printedName": "LeeepIosSdk.LeeepAnalytics",
+                "usr": "s:11LeeepIosSdk0A9AnalyticsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11LeeepIosSdk0A0V9AnalyticsAA0aD0VvpZ",
+            "mangledName": "$s11LeeepIosSdk0A0V9AnalyticsAA0aD0VvpZ",
+            "moduleName": "LeeepIosSdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LeeepAnalytics",
+                    "printedName": "LeeepIosSdk.LeeepAnalytics",
+                    "usr": "s:11LeeepIosSdk0A9AnalyticsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11LeeepIosSdk0A0V9AnalyticsAA0aD0VvgZ",
+                "mangledName": "$s11LeeepIosSdk0A0V9AnalyticsAA0aD0VvgZ",
+                "moduleName": "LeeepIosSdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "showLog",
+            "printedName": "showLog",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11LeeepIosSdk0A0V7showLogSbvpZ",
+            "mangledName": "$s11LeeepIosSdk0A0V7showLogSbvpZ",
+            "moduleName": "LeeepIosSdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11LeeepIosSdk0A0V7showLogSbvgZ",
+                "mangledName": "$s11LeeepIosSdk0A0V7showLogSbvgZ",
+                "moduleName": "LeeepIosSdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11LeeepIosSdk0A0V7showLogSbvsZ",
+                "mangledName": "$s11LeeepIosSdk0A0V7showLogSbvsZ",
+                "moduleName": "LeeepIosSdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11LeeepIosSdk0A0V7showLogSbvMZ",
+                "mangledName": "$s11LeeepIosSdk0A0V7showLogSbvMZ",
+                "moduleName": "LeeepIosSdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setup",
+            "printedName": "setup(websiteId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A0V5setup9websiteIdySS_tFZ",
+            "mangledName": "$s11LeeepIosSdk0A0V5setup9websiteIdySS_tFZ",
+            "moduleName": "LeeepIosSdk",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUserId",
+            "printedName": "setUserId(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A0V9setUserIdyySSSgFZ",
+            "mangledName": "$s11LeeepIosSdk0A0V9setUserIdyySSSgFZ",
+            "moduleName": "LeeepIosSdk",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11LeeepIosSdk0A0V",
+        "mangledName": "$s11LeeepIosSdk0A0V",
+        "moduleName": "LeeepIosSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LeeepAnalytics",
+        "printedName": "LeeepAnalytics",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "viewPage",
+            "printedName": "viewPage()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A9AnalyticsV8viewPageyyF",
+            "mangledName": "$s11LeeepIosSdk0A9AnalyticsV8viewPageyyF",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewItem",
+            "printedName": "viewItem(productId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A9AnalyticsV8viewItem9productIdySS_tF",
+            "mangledName": "$s11LeeepIosSdk0A9AnalyticsV8viewItem9productIdySS_tF",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewTag",
+            "printedName": "viewTag(tagId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A9AnalyticsV7viewTag5tagIdySS_tF",
+            "mangledName": "$s11LeeepIosSdk0A9AnalyticsV7viewTag5tagIdySS_tF",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewPost",
+            "printedName": "viewPost(postId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A9AnalyticsV8viewPost6postIdySS_tF",
+            "mangledName": "$s11LeeepIosSdk0A9AnalyticsV8viewPost6postIdySS_tF",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clickItem",
+            "printedName": "clickItem(tagId:postId:productId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A9AnalyticsV9clickItem5tagId04postH007productH0ySS_S2StF",
+            "mangledName": "$s11LeeepIosSdk0A9AnalyticsV9clickItem5tagId04postH007productH0ySS_S2StF",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "order",
+            "printedName": "order(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LeeepOrder",
+                "printedName": "LeeepIosSdk.LeeepOrder",
+                "usr": "s:11LeeepIosSdk0A5OrderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A9AnalyticsV5orderyyAA0A5OrderVF",
+            "mangledName": "$s11LeeepIosSdk0A9AnalyticsV5orderyyAA0A5OrderVF",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11LeeepIosSdk0A9AnalyticsV",
+        "mangledName": "$s11LeeepIosSdk0A9AnalyticsV",
+        "moduleName": "LeeepIosSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LeeepTagView",
+        "printedName": "LeeepTagView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(tagId:productId:brandCode:postId:staffId:onTapLink:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LeeepTagView",
+                "printedName": "LeeepIosSdk.LeeepTagView",
+                "usr": "s:11LeeepIosSdk0A7TagViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((LeeepIosSdk.LeeepHandlerParam) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(LeeepIosSdk.LeeepHandlerParam) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11LeeepIosSdk0A7TagViewV5tagId07productG09brandCode04postG005staffG09onTapLinkACSS_SSSgA3JyAA0A12HandlerParamOcSgtcfc",
+            "mangledName": "$s11LeeepIosSdk0A7TagViewV5tagId07productG09brandCode04postG005staffG09onTapLinkACSS_SSSgA3JyAA0A12HandlerParamOcSgtcfc",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "makeUIView",
+            "printedName": "makeUIView(context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some UIKit.UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewRepresentableContext",
+                "printedName": "SwiftUI.UIViewRepresentableContext<LeeepIosSdk.LeeepTagView>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LeeepTagView",
+                    "printedName": "LeeepIosSdk.LeeepTagView",
+                    "usr": "s:11LeeepIosSdk0A7TagViewV"
+                  }
+                ],
+                "usr": "s:7SwiftUI26UIViewRepresentableContextV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A7TagViewV10makeUIView7contextQr7SwiftUI0G20RepresentableContextVyACG_tF",
+            "mangledName": "$s11LeeepIosSdk0A7TagViewV10makeUIView7contextQr7SwiftUI0G20RepresentableContextVyACG_tF",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateUIView",
+            "printedName": "updateUIView(_:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some UIKit.UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewRepresentableContext",
+                "printedName": "SwiftUI.UIViewRepresentableContext<LeeepIosSdk.LeeepTagView>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LeeepTagView",
+                    "printedName": "LeeepIosSdk.LeeepTagView",
+                    "usr": "s:11LeeepIosSdk0A7TagViewV"
+                  }
+                ],
+                "usr": "s:7SwiftUI26UIViewRepresentableContextV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A7TagViewV12updateUIView_7contextyAC04makeG0AEQr7SwiftUI0G20RepresentableContextVyACG_tFQOy_Qo__AJtF",
+            "mangledName": "$s11LeeepIosSdk0A7TagViewV12updateUIView_7contextyAC04makeG0AEQr7SwiftUI0G20RepresentableContextVyACG_tFQOy_Qo__AJtF",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11LeeepIosSdk0A7TagViewV",
+        "mangledName": "$s11LeeepIosSdk0A7TagViewV",
+        "moduleName": "LeeepIosSdk",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UIViewRepresentable",
+            "printedName": "UIViewRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UIViewType",
+                "printedName": "UIViewType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some UIKit.UIView"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Coordinator",
+                "printedName": "Coordinator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI19UIViewRepresentableP",
+            "mangledName": "$s7SwiftUI19UIViewRepresentableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LeeepTagViewUIKit",
+        "printedName": "LeeepTagViewUIKit",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(tagId:productId:brandCode:postId:staffId:onTapLink:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LeeepTagViewUIKit",
+                "printedName": "LeeepIosSdk.LeeepTagViewUIKit",
+                "usr": "c:@M@LeeepIosSdk@objc(cs)LeeepTagViewUIKit"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((LeeepIosSdk.LeeepHandlerParam) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(LeeepIosSdk.LeeepHandlerParam) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11LeeepIosSdk0A12TagViewUIKitC5tagId07productH09brandCode04postH005staffH09onTapLinkACSS_SSSgA3JyAA0A12HandlerParamOcSgtcfc",
+            "mangledName": "$s11LeeepIosSdk0A12TagViewUIKitC5tagId07productH09brandCode04postH005staffH09onTapLinkACSS_SSSgA3JyAA0A12HandlerParamOcSgtcfc",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "intrinsicContentSize",
+            "printedName": "intrinsicContentSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@LeeepIosSdk@objc(cs)LeeepTagViewUIKit(py)intrinsicContentSize",
+            "mangledName": "$s11LeeepIosSdk0A12TagViewUIKitC20intrinsicContentSizeSo6CGSizeVvp",
+            "moduleName": "LeeepIosSdk",
+            "overriding": true,
+            "objc_name": "intrinsicContentSize",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LeeepIosSdk@objc(cs)LeeepTagViewUIKit(im)intrinsicContentSize",
+                "mangledName": "$s11LeeepIosSdk0A12TagViewUIKitC20intrinsicContentSizeSo6CGSizeVvg",
+                "moduleName": "LeeepIosSdk",
+                "overriding": true,
+                "objc_name": "intrinsicContentSize",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "webView",
+            "printedName": "webView(_:decidePolicyFor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WKNavigationActionPolicy",
+                "printedName": "WebKit.WKNavigationActionPolicy",
+                "usr": "c:@E@WKNavigationActionPolicy"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKNavigationAction",
+                "printedName": "WebKit.WKNavigationAction",
+                "usr": "c:objc(cs)WKNavigationAction"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@LeeepIosSdk@objc(cs)LeeepTagViewUIKit(im)webView:decidePolicyForNavigationAction:decisionHandler:",
+            "mangledName": "$s11LeeepIosSdk0A12TagViewUIKitC03webE0_15decidePolicyForSo018WKNavigationActionI0VSo05WKWebE0C_So0kL0CtYaF",
+            "moduleName": "LeeepIosSdk",
+            "objc_name": "webView:decidePolicyForNavigationAction:decisionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LeeepTagViewUIKit",
+                "printedName": "LeeepIosSdk.LeeepTagViewUIKit",
+                "usr": "c:@M@LeeepIosSdk@objc(cs)LeeepTagViewUIKit"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@LeeepIosSdk@objc(cs)LeeepTagViewUIKit(im)initWithFrame:",
+            "mangledName": "$s11LeeepIosSdk0A12TagViewUIKitC5frameACSo6CGRectV_tcfc",
+            "moduleName": "LeeepIosSdk",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@LeeepIosSdk@objc(cs)LeeepTagViewUIKit",
+        "mangledName": "$s11LeeepIosSdk0A12TagViewUIKitC",
+        "moduleName": "LeeepIosSdk",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LeeepHandlerParam",
+        "printedName": "LeeepHandlerParam",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "post",
+            "printedName": "post",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LeeepIosSdk.LeeepHandlerParam.Type) -> (Swift.String, Foundation.URL) -> LeeepIosSdk.LeeepHandlerParam",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Foundation.URL) -> LeeepIosSdk.LeeepHandlerParam",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(id: Swift.String, url: Foundation.URL)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URL",
+                            "printedName": "Foundation.URL",
+                            "usr": "s:10Foundation3URLV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LeeepIosSdk.LeeepHandlerParam.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LeeepIosSdk0A12HandlerParamO4postyACSS_10Foundation3URLVtcACmF",
+            "mangledName": "$s11LeeepIosSdk0A12HandlerParamO4postyACSS_10Foundation3URLVtcACmF",
+            "moduleName": "LeeepIosSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "staff",
+            "printedName": "staff",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LeeepIosSdk.LeeepHandlerParam.Type) -> (Swift.String, Foundation.URL) -> LeeepIosSdk.LeeepHandlerParam",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Foundation.URL) -> LeeepIosSdk.LeeepHandlerParam",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(id: Swift.String, url: Foundation.URL)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URL",
+                            "printedName": "Foundation.URL",
+                            "usr": "s:10Foundation3URLV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LeeepIosSdk.LeeepHandlerParam.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LeeepIosSdk0A12HandlerParamO5staffyACSS_10Foundation3URLVtcACmF",
+            "mangledName": "$s11LeeepIosSdk0A12HandlerParamO5staffyACSS_10Foundation3URLVtcACmF",
+            "moduleName": "LeeepIosSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "product",
+            "printedName": "product",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LeeepIosSdk.LeeepHandlerParam.Type) -> (Swift.String, Foundation.URL) -> LeeepIosSdk.LeeepHandlerParam",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Foundation.URL) -> LeeepIosSdk.LeeepHandlerParam",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(id: Swift.String, url: Foundation.URL)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URL",
+                            "printedName": "Foundation.URL",
+                            "usr": "s:10Foundation3URLV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LeeepIosSdk.LeeepHandlerParam.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LeeepIosSdk0A12HandlerParamO7productyACSS_10Foundation3URLVtcACmF",
+            "mangledName": "$s11LeeepIosSdk0A12HandlerParamO7productyACSS_10Foundation3URLVtcACmF",
+            "moduleName": "LeeepIosSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "other",
+            "printedName": "other",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LeeepIosSdk.LeeepHandlerParam.Type) -> (Foundation.URL) -> LeeepIosSdk.LeeepHandlerParam",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.URL) -> LeeepIosSdk.LeeepHandlerParam",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(url: Foundation.URL)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URL",
+                            "printedName": "Foundation.URL",
+                            "usr": "s:10Foundation3URLV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LeeepIosSdk.LeeepHandlerParam.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A12HandlerParamO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LeeepIosSdk0A12HandlerParamO5otheryAC10Foundation3URLV_tcACmF",
+            "mangledName": "$s11LeeepIosSdk0A12HandlerParamO5otheryAC10Foundation3URLV_tcACmF",
+            "moduleName": "LeeepIosSdk"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11LeeepIosSdk0A12HandlerParamO",
+        "mangledName": "$s11LeeepIosSdk0A12HandlerParamO",
+        "moduleName": "LeeepIosSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LeeepOrder",
+        "printedName": "LeeepOrder",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(orderId:products:discountAmount:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LeeepOrder",
+                "printedName": "LeeepIosSdk.LeeepOrder",
+                "usr": "s:11LeeepIosSdk0A5OrderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[LeeepIosSdk.LeeepOrderProduct]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LeeepOrderProduct",
+                    "printedName": "LeeepIosSdk.LeeepOrderProduct",
+                    "usr": "s:11LeeepIosSdk0A12OrderProductV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11LeeepIosSdk0A5OrderV7orderId8products14discountAmountACSS_SayAA0aD7ProductVGSitcfc",
+            "mangledName": "$s11LeeepIosSdk0A5OrderV7orderId8products14discountAmountACSS_SayAA0aD7ProductVGSitcfc",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11LeeepIosSdk0A5OrderV",
+        "mangledName": "$s11LeeepIosSdk0A5OrderV",
+        "moduleName": "LeeepIosSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LeeepOrderProduct",
+        "printedName": "LeeepOrderProduct",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(productId:skuCode:salesPrice:quantity:name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LeeepOrderProduct",
+                "printedName": "LeeepIosSdk.LeeepOrderProduct",
+                "usr": "s:11LeeepIosSdk0A12OrderProductV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11LeeepIosSdk0A12OrderProductV9productId7skuCode10salesPrice8quantity4nameACSS_SSS2iSStcfc",
+            "mangledName": "$s11LeeepIosSdk0A12OrderProductV9productId7skuCode10salesPrice8quantity4nameACSS_SSS2iSStcfc",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11LeeepIosSdk0A12OrderProductV",
+        "mangledName": "$s11LeeepIosSdk0A12OrderProductV",
+        "moduleName": "LeeepIosSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 256,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 299,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 331,
+      "length": 6,
+      "value": "\"{id}\""
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 375,
+      "length": 18,
+      "value": "\"leeep_product_id\""
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 522,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 590,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "Dictionary",
+      "offset": 5353,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}

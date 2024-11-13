@@ -1,0 +1,6 @@
+framework module LeeepIosSdk {
+  umbrella header "LeeepIosSdk.h"
+  export *
+
+  module * { export * }
+}
