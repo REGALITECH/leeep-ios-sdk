@@ -20,7 +20,7 @@ public struct LeeepAnalytics {
   public func viewTag(tagId: Swift.String)
   public func viewPost(postId: Swift.String)
   public func clickItem(tagId: Swift.String, postId: Swift.String, productId: Swift.String)
-  public func order(_ order: LeeepIosSdk.LeeepOrder)
+  public func order(orderId: Swift.String, products: [LeeepIosSdk.LeeepOrderProduct], discountAmount: Swift.Int = 0)
 }
 @_Concurrency.MainActor @preconcurrency public struct LeeepTagView : SwiftUI.UIViewRepresentable {
   @_Concurrency.MainActor @preconcurrency public init(tagId: Swift.String, productId: Swift.String? = nil, brandCode: Swift.String? = nil, postId: Swift.String? = nil, staffId: Swift.String? = nil, onTapLink: LeeepIosSdk.LeeepLinkHandler? = nil)
@@ -46,16 +46,13 @@ public struct LeeepAnalytics {
   }
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction) async -> WebKit.WKNavigationActionPolicy
 }
-public enum LeeepHandlerParam {
+public enum LeeepLinkHandlerParam {
   case post(id: Swift.String, url: Foundation.URL)
   case staff(id: Swift.String, url: Foundation.URL)
   case product(id: Swift.String, url: Foundation.URL)
   case other(url: Foundation.URL)
 }
-public typealias LeeepLinkHandler = (LeeepIosSdk.LeeepHandlerParam) -> ()
-public struct LeeepOrder {
-  public init(orderId: Swift.String, products: [LeeepIosSdk.LeeepOrderProduct], discountAmount: Swift.Int)
-}
+public typealias LeeepLinkHandler = (LeeepIosSdk.LeeepLinkHandlerParam) -> ()
 public struct LeeepOrderProduct {
   public init(productId: Swift.String, skuCode: Swift.String, salesPrice: Swift.Int, quantity: Swift.Int, name: Swift.String)
 }
