@@ -10,15 +10,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1Sg7NpUeX577yP3rcuHUdF2tM4A=
+		U/CIy+YjjiMWORKecESr+XLvTFw=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		zaO2RH65i2Kk/jRZKQwDJl/dfpE=
+		wPMp5efMwTDZyiKBoM8lI3i6lEo=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		i4NGndxkzSHEQwFIAx4ARl0MvQA=
+		bvfKxE9oUK9/itUi/O1AXfF35jI=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		i4NGndxkzSHEQwFIAx4ARl0MvQA=
+		bvfKxE9oUK9/itUi/O1AXfF35jI=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		US3tHAqR85pRG2s6VedSh0tsEzI=
+		ZNq1MnVMzoGZmzOykYaluLTKAi4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,14 +50,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xIp5GMuvqVuWVV72QC1FzM/JzVad4GU9XUBGbtzNRgs=
+			P1lJwkyecVNBpWsoHpMnVlZ0wqZ878741NMJd4r6SR8=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T6lEwrenRR/mdbExD+nD7+jC4YAmC6FB2/+I4HOGlaw=
+			/4cn4pryCV/+zLxQesqEEXGBOODcdhxDCp9ekFxlYPE=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -71,14 +71,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T6lEwrenRR/mdbExD+nD7+jC4YAmC6FB2/+I4HOGlaw=
+			/4cn4pryCV/+zLxQesqEEXGBOODcdhxDCp9ekFxlYPE=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			THrGnHs4Raa4Xa4yuaHpWLGHd88Yiy20QcSCZEUIKIA=
+			eHXDInAqp8B+5CKWlQAviwnF5PHCZ3Ah7yVOsqV3uNQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
