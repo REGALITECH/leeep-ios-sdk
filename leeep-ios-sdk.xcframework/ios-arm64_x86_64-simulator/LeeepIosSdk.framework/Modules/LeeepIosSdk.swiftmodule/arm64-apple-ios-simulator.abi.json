@@ -469,7 +469,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(tagId:productId:brandCode:postId:staffId:onTapLink:)",
+            "printedName": "init(tagId:productId:cartProductId:brandCode:postId:staffId:onTapLink:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -482,6 +482,21 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -572,8 +587,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11LeeepIosSdk0A7TagViewV5tagId07productG09brandCode04postG005staffG09onTapLinkACSS_SSSgA3JyAA0aO12HandlerParamOcSgtcfc",
-            "mangledName": "$s11LeeepIosSdk0A7TagViewV5tagId07productG09brandCode04postG005staffG09onTapLinkACSS_SSSgA3JyAA0aO12HandlerParamOcSgtcfc",
+            "usr": "s:11LeeepIosSdk0A7TagViewV5tagId07productG0011cartProductG09brandCode04postG005staffG09onTapLinkACSS_SSSgA4KyAA0aQ12HandlerParamOcSgtcfc",
+            "mangledName": "$s11LeeepIosSdk0A7TagViewV5tagId07productG0011cartProductG09brandCode04postG005staffG09onTapLinkACSS_SSSgA4KyAA0aQ12HandlerParamOcSgtcfc",
             "moduleName": "LeeepIosSdk",
             "declAttributes": [
               "Preconcurrency",
@@ -756,7 +771,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(tagId:productId:brandCode:postId:staffId:onTapLink:)",
+            "printedName": "init(tagId:productId:cartProductId:brandCode:postId:staffId:onTapLink:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -769,6 +784,21 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -859,8 +889,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11LeeepIosSdk0A12TagViewUIKitC5tagId07productH09brandCode04postH005staffH09onTapLinkACSS_SSSgA3JyAA0aP12HandlerParamOcSgtcfc",
-            "mangledName": "$s11LeeepIosSdk0A12TagViewUIKitC5tagId07productH09brandCode04postH005staffH09onTapLinkACSS_SSSgA3JyAA0aP12HandlerParamOcSgtcfc",
+            "usr": "s:11LeeepIosSdk0A12TagViewUIKitC5tagId07productH0011cartProductH09brandCode04postH005staffH09onTapLinkACSS_SSSgA4KyAA0aR12HandlerParamOcSgtcfc",
+            "mangledName": "$s11LeeepIosSdk0A12TagViewUIKitC5tagId07productH0011cartProductH09brandCode04postH005staffH09onTapLinkACSS_SSSgA4KyAA0aR12HandlerParamOcSgtcfc",
             "moduleName": "LeeepIosSdk",
             "declAttributes": [
               "Preconcurrency",
@@ -1588,56 +1618,56 @@
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 7534,
+      "offset": 7770,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 7585,
+      "offset": 7821,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
-      "offset": 7646,
+      "offset": 7882,
       "length": 28,
       "value": "\"leeep_search_filter_submit\""
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
-      "offset": 7705,
+      "offset": 7941,
       "length": 18,
       "value": "\"leeep_pager_link\""
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
-      "offset": 7759,
+      "offset": 7995,
       "length": 13,
       "value": "\"LeeepIosSdk\""
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
-      "offset": 7994,
+      "offset": 8261,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 8027,
+      "offset": 8294,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 8078,
+      "offset": 8345,
       "length": 5,
       "value": "false"
     }
