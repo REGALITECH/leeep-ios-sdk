@@ -1,10 +1,14 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name LeeepIosSdk
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name LeeepIosSdk
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+import AVFoundation
+import AVKit
 @_exported import LeeepIosSdk
 import Swift
 import SwiftUI
 import WebKit
+import _AVKit_SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -27,15 +31,8 @@ public struct LeeepAnalytics {
   @_Concurrency.MainActor @preconcurrency public func makeUIView(context: LeeepIosSdk.LeeepTagView.Context) -> some UIKit.UIView
   
   @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: @_opaqueReturnTypeOf("$s11LeeepIosSdk0A7TagViewV10makeUIView7contextQr7SwiftUI0G20RepresentableContextVyACG_tF", 0) __, context: LeeepIosSdk.LeeepTagView.Context)
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias Body = Swift.Never
-  @available(iOS 13.0, tvOS 13.0, *)
-  @available(watchOS, unavailable)
-  @available(macOS, unavailable)
   public typealias Coordinator = Swift.Void
-  @available(iOS 13.0, tvOS 13.0, *)
-  @available(watchOS, unavailable)
-  @available(macOS, unavailable)
   public typealias UIViewType = @_opaqueReturnTypeOf("$s11LeeepIosSdk0A7TagViewV10makeUIView7contextQr7SwiftUI0G20RepresentableContextVyACG_tF", 0) __
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class LeeepTagViewUIKit : UIKit.UIView, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
@@ -52,10 +49,34 @@ public enum LeeepLinkHandlerParam {
   case post(id: Swift.String, url: Foundation.URL)
   case staff(id: Swift.String, url: Foundation.URL)
   case product(id: Swift.String, url: Foundation.URL)
+  case reviewForm(productId: Swift.String, url: Foundation.URL)
   case other(url: Foundation.URL)
 }
 public typealias LeeepLinkHandler = (LeeepIosSdk.LeeepLinkHandlerParam) -> ()
 public struct LeeepOrderProduct {
   public init(productId: Swift.String, skuCode: Swift.String, salesPrice: Swift.Int, quantity: Swift.Int, name: Swift.String)
 }
+public enum LeeepMediaType {
+  case image
+  case video
+  public static func == (a: LeeepIosSdk.LeeepMediaType, b: LeeepIosSdk.LeeepMediaType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_Concurrency.MainActor @preconcurrency public struct LeeepMediaPopupView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(mediaURL: Foundation.URL, mediaType: LeeepIosSdk.LeeepMediaType, isPresented: SwiftUICore.Binding<Swift.Bool>)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s11LeeepIosSdk0A14MediaPopupViewV4bodyQrvp", 0) __
+}
+extension LeeepIosSdk.LeeepMediaPopupView {
+  @_Concurrency.MainActor @preconcurrency public static func show(mediaURL: Foundation.URL, mediaType: LeeepIosSdk.LeeepMediaType, from viewController: UIKit.UIViewController? = nil)
+  @_Concurrency.MainActor @preconcurrency public static func dismiss()
+}
 extension LeeepIosSdk.LeeepTagView : Swift.Sendable {}
+extension LeeepIosSdk.LeeepMediaType : Swift.Equatable {}
+extension LeeepIosSdk.LeeepMediaType : Swift.Hashable {}
+extension LeeepIosSdk.LeeepMediaPopupView : Swift.Sendable {}
