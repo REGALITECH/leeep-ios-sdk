@@ -1010,6 +1010,28 @@
           },
           {
             "kind": "Function",
+            "name": "refreshLayout",
+            "printedName": "refreshLayout()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LeeepIosSdk0A12TagViewUIKitC13refreshLayoutyyF",
+            "mangledName": "$s11LeeepIosSdk0A12TagViewUIKitC13refreshLayoutyyF",
+            "moduleName": "LeeepIosSdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "webView",
             "printedName": "webView(_:decidePolicyFor:)",
             "children": [
@@ -1137,38 +1159,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
           },
           {
             "kind": "Conformance",
@@ -1179,17 +1173,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -1200,10 +1194,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "UITraitChangeObservable",
-            "printedName": "UITraitChangeObservable",
-            "usr": "s:5UIKit23UITraitChangeObservableP",
-            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -1211,6 +1226,13 @@
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
             "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           }
         ]
       },
@@ -1850,17 +1872,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -2238,71 +2260,85 @@
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
-      "kind": "IntegerLiteral",
-      "offset": 23074,
-      "length": 1,
-      "value": "0"
+      "kind": "BooleanLiteral",
+      "offset": 10007,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 28612,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
-      "kind": "StringLiteral",
-      "offset": 29146,
-      "length": 13,
-      "value": "\"LeeepIosSdk\""
-    },
-    {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
-      "kind": "BooleanLiteral",
-      "offset": 33534,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
-      "kind": "BooleanLiteral",
-      "offset": 36432,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
-      "kind": "IntegerLiteral",
-      "offset": 36478,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
-      "kind": "IntegerLiteral",
-      "offset": 36518,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
-      "kind": "BooleanLiteral",
-      "offset": 38448,
+      "offset": 14898,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 38497,
+      "offset": 24173,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 29711,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 30245,
+      "length": 13,
+      "value": "\"LeeepIosSdk\""
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 34633,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 37531,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 37577,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 38729,
+      "offset": 37617,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 39547,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 39596,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "kind": "IntegerLiteral",
+      "offset": 39828,
       "length": 2,
       "value": "12"
     }
