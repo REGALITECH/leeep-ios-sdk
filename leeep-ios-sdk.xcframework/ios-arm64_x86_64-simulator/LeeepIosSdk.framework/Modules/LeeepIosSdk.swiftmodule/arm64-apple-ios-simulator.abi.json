@@ -1369,6 +1369,69 @@
           },
           {
             "kind": "Var",
+            "name": "ugc",
+            "printedName": "ugc",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LeeepIosSdk.LeeepLinkHandlerParam.Type) -> (Swift.String, Foundation.URL) -> LeeepIosSdk.LeeepLinkHandlerParam",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Foundation.URL) -> LeeepIosSdk.LeeepLinkHandlerParam",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepLinkHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepLinkHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A16LinkHandlerParamO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(id: Swift.String, url: Foundation.URL)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URL",
+                            "printedName": "Foundation.URL",
+                            "usr": "s:10Foundation3URLV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LeeepIosSdk.LeeepLinkHandlerParam.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LeeepLinkHandlerParam",
+                        "printedName": "LeeepIosSdk.LeeepLinkHandlerParam",
+                        "usr": "s:11LeeepIosSdk0A16LinkHandlerParamO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LeeepIosSdk0A16LinkHandlerParamO3ugcyACSS_10Foundation3URLVtcACmF",
+            "mangledName": "$s11LeeepIosSdk0A16LinkHandlerParamO3ugcyACSS_10Foundation3URLVtcACmF",
+            "moduleName": "LeeepIosSdk"
+          },
+          {
+            "kind": "Var",
             "name": "product",
             "printedName": "product",
             "children": [
@@ -2147,198 +2210,198 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 289,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
       "offset": 324,
       "length": 26,
       "value": "\"https:\/\/ios.sdk.leeep.jp\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
       "offset": 377,
       "length": 6,
       "value": "\"{id}\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
       "offset": 421,
       "length": 18,
       "value": "\"leeep_product_id\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
       "offset": 568,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
       "offset": 636,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 5720,
+      "offset": 6279,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "Dictionary",
-      "offset": 6922,
+      "offset": 7481,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 9342,
+      "offset": 9901,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 9392,
+      "offset": 9951,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
-      "offset": 9453,
+      "offset": 10012,
       "length": 28,
       "value": "\"leeep_search_filter_submit\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
-      "offset": 9512,
+      "offset": 10071,
       "length": 18,
       "value": "\"leeep_pager_link\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
-      "offset": 9566,
+      "offset": 10125,
       "length": 13,
       "value": "\"LeeepIosSdk\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
-      "offset": 9832,
+      "offset": 10391,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 9865,
+      "offset": 10424,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 9916,
+      "offset": 10475,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 10007,
+      "offset": 10566,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 14898,
+      "offset": 15457,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 24173,
+      "offset": 25176,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 29711,
+      "offset": 30714,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "StringLiteral",
-      "offset": 30245,
+      "offset": 31248,
       "length": 13,
       "value": "\"LeeepIosSdk\""
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 34633,
+      "offset": 35636,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 37531,
+      "offset": 38534,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 37577,
+      "offset": 38580,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 37617,
+      "offset": 38620,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "BooleanLiteral",
-      "offset": 39547,
+      "offset": 40550,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 39596,
+      "offset": 40599,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/sakmt\/regali\/leeep-ios-sdk-internal\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
+      "filePath": "\/Users\/g-nakanishi\/dev\/github.com\/REGALITECH\/leeep-ios-sdk-internal-pr18\/LeeepIosSdk\/LeeepIosSdk\/LeeepIosSdk.swift",
       "kind": "IntegerLiteral",
-      "offset": 39828,
+      "offset": 40831,
       "length": 2,
       "value": "12"
     }
