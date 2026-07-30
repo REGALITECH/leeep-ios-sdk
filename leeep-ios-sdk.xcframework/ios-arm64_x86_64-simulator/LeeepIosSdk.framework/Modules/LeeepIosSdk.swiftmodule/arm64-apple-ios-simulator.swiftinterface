@@ -7,6 +7,7 @@ import AVKit
 @_exported import LeeepIosSdk
 import Swift
 import SwiftUI
+import UIKit
 import WebKit
 import _AVKit_SwiftUI
 import _Concurrency
@@ -16,6 +17,9 @@ import _WebKit_SwiftUI
 public struct Leeep {
   public static let Analytics: LeeepIosSdk.LeeepAnalytics
   public static var showLog: Swift.Bool
+  public static var debugSdkOrigin: Swift.String?
+  public static var debugCiteOrigin: Swift.String?
+  public static var debugTrackingOrigin: Swift.String?
   public static func setup(websiteId: Swift.String)
   public static func setUserId(_ userId: Swift.String?)
 }
@@ -78,6 +82,10 @@ public enum LeeepMediaType {
 extension LeeepIosSdk.LeeepMediaPopupView {
   @_Concurrency.MainActor @preconcurrency public static func show(mediaURL: Foundation.URL, mediaType: LeeepIosSdk.LeeepMediaType, from viewController: UIKit.UIViewController? = nil)
   @_Concurrency.MainActor @preconcurrency public static func dismiss()
+}
+@_hasMissingDesignatedInitializers public class LeeepShortVideoViewer {
+  public static func show(tagId: Swift.String, from viewController: UIKit.UIViewController? = nil, onTapLink: LeeepIosSdk.LeeepLinkHandler? = nil)
+  @objc deinit
 }
 extension LeeepIosSdk.LeeepTagView : Swift.Sendable {}
 extension LeeepIosSdk.LeeepMediaType : Swift.Equatable {}
