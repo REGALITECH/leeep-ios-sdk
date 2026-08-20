@@ -33,6 +33,7 @@ public struct LeeepAnalytics {
 }
 @_Concurrency.MainActor @preconcurrency public struct LeeepTagView : SwiftUI.UIViewRepresentable {
   @_Concurrency.MainActor @preconcurrency public init(tagId: Swift.String, productId: Swift.String? = nil, cartProductId: Swift.String? = nil, brandCode: Swift.String? = nil, postId: Swift.String? = nil, staffId: Swift.String? = nil, onTapLink: LeeepIosSdk.LeeepLinkHandler? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(tagId: Swift.String, productId: Swift.String? = nil, cartProductId: Swift.String? = nil, brandCode: Swift.String? = nil, postId: Swift.String? = nil, staffId: Swift.String? = nil, onScrollRequest: LeeepIosSdk.LeeepScrollRequestHandler?, onTapLink: LeeepIosSdk.LeeepLinkHandler? = nil)
   @_Concurrency.MainActor @preconcurrency public func makeUIView(context: LeeepIosSdk.LeeepTagView.Context) -> some UIKit.UIView
   
   @_Concurrency.MainActor @preconcurrency public func updateUIView(_ uiView: @_opaqueReturnTypeOf("$s11LeeepIosSdk0A7TagViewV10makeUIView7contextQr7SwiftUI0G20RepresentableContextVyACG_tF", 0) __, context: LeeepIosSdk.LeeepTagView.Context)
@@ -41,7 +42,12 @@ public struct LeeepAnalytics {
   public typealias UIViewType = @_opaqueReturnTypeOf("$s11LeeepIosSdk0A7TagViewV10makeUIView7contextQr7SwiftUI0G20RepresentableContextVyACG_tF", 0) __
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class LeeepTagViewUIKit : UIKit.UIView, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor @preconcurrency public var onScrollRequest: LeeepIosSdk.LeeepScrollRequestHandler? {
+    get
+    set
+  }
   @_Concurrency.MainActor @preconcurrency public init(tagId: Swift.String, productId: Swift.String? = nil, cartProductId: Swift.String? = nil, brandCode: Swift.String? = nil, postId: Swift.String? = nil, staffId: Swift.String? = nil, onTapLink: LeeepIosSdk.LeeepLinkHandler? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(tagId: Swift.String, productId: Swift.String? = nil, cartProductId: Swift.String? = nil, brandCode: Swift.String? = nil, postId: Swift.String? = nil, staffId: Swift.String? = nil, onScrollRequest: LeeepIosSdk.LeeepScrollRequestHandler?, onTapLink: LeeepIosSdk.LeeepLinkHandler? = nil)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
   @objc deinit
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
@@ -60,6 +66,31 @@ public enum LeeepLinkHandlerParam {
   case other(url: Foundation.URL)
 }
 public typealias LeeepLinkHandler = (LeeepIosSdk.LeeepLinkHandlerParam) -> ()
+public enum LeeepScrollRequestReason : Swift.String {
+  case reviewPagination
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LeeepScrollRequestTarget : Swift.String {
+  case reviewListTop
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct LeeepScrollRequest : Swift.Equatable {
+  public let tagId: Swift.String
+  public let reason: LeeepIosSdk.LeeepScrollRequestReason
+  public let target: LeeepIosSdk.LeeepScrollRequestTarget
+  public let contentOffsetTop: Swift.Double
+  public let hostOffsetTop: Swift.Double
+  public static func == (a: LeeepIosSdk.LeeepScrollRequest, b: LeeepIosSdk.LeeepScrollRequest) -> Swift.Bool
+}
+public typealias LeeepScrollRequestHandler = (LeeepIosSdk.LeeepScrollRequest) -> ()
 public struct LeeepOrderProduct {
   public init(productId: Swift.String, skuCode: Swift.String, salesPrice: Swift.Int, quantity: Swift.Int, name: Swift.String)
 }
@@ -88,6 +119,12 @@ extension LeeepIosSdk.LeeepMediaPopupView {
   @objc deinit
 }
 extension LeeepIosSdk.LeeepTagView : Swift.Sendable {}
+extension LeeepIosSdk.LeeepScrollRequestReason : Swift.Equatable {}
+extension LeeepIosSdk.LeeepScrollRequestReason : Swift.Hashable {}
+extension LeeepIosSdk.LeeepScrollRequestReason : Swift.RawRepresentable {}
+extension LeeepIosSdk.LeeepScrollRequestTarget : Swift.Equatable {}
+extension LeeepIosSdk.LeeepScrollRequestTarget : Swift.Hashable {}
+extension LeeepIosSdk.LeeepScrollRequestTarget : Swift.RawRepresentable {}
 extension LeeepIosSdk.LeeepMediaType : Swift.Equatable {}
 extension LeeepIosSdk.LeeepMediaType : Swift.Hashable {}
 extension LeeepIosSdk.LeeepMediaPopupView : Swift.Sendable {}
