@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import AVFoundation
 import AVKit
+import Foundation
 @_exported import LeeepIosSdk
 import Swift
 import SwiftUI
