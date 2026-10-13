@@ -10,47 +10,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HwEotNQvj6rEFfGR99/c+zfbE2Y=
+		VMIToQd+Knb6DSc/tWBO4B7AzpU=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		bCS1UO9fCjliuGOlOg0gMYdwN68=
+		mVznKO9WLfzxl+NapdE3aJknnvA=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		uBBDWDS+f91X3vXMxrYJVw8Kd9c=
+		YoFoeqEVB3R2il7VvOcdrX3IIYU=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		rgTY09bqVoKbPAS2KRe8XV2jn0w=
+		96+MW2gIQI3y8uj7+o+qHtYV0Oo=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		uBBDWDS+f91X3vXMxrYJVw8Kd9c=
+		YoFoeqEVB3R2il7VvOcdrX3IIYU=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		izpu5pT6HO37Wy5iThRCyBE4WG8=
+		DdC0ERp3HkneynJbUlPX7odibeQ=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		bCS1UO9fCjliuGOlOg0gMYdwN68=
+		mVznKO9WLfzxl+NapdE3aJknnvA=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/TzJGxuuO1KJTl2n/ajdvWUFXcQ=
+		z0izkMzZRZyi2NaYNjjAznjIwG8=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		DsMAW5PLBilF8vjRC/DaswJQyKg=
+		eQ0S9ZvouH0iVYoPq68HRzLifrU=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/TzJGxuuO1KJTl2n/ajdvWUFXcQ=
+		z0izkMzZRZyi2NaYNjjAznjIwG8=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		69y6311IkLm9eeoNftIKrxTHSA8=
+		udMx5jh5xeedzdkhEIz5Y8z+pZg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,70 +70,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			F+I8GoymPsqfZCcTYuvBPTMTfoU0V3n4rdU64pSax/I=
+			QSFrzFjMVyNoEHCZVqwcStJxzoK5Tj4aBwgQDGCzToQ=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8NaBJ9TPp5t6sng4003DmZ828QgigujB+ftmJb2c8aY=
+			6k5XfXpY/Z9BoOrDbKlGBstv73HZlPS9v87zGZDiQek=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gOmadCfOBcJLhf26eoyTN3Hp2NJpheB7SZgSirfnaPQ=
+			wMNp8SM8k8y/mVjFYWjrOzDWh44Qmw9tWnj3nAlwr5g=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8NaBJ9TPp5t6sng4003DmZ828QgigujB+ftmJb2c8aY=
+			6k5XfXpY/Z9BoOrDbKlGBstv73HZlPS9v87zGZDiQek=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7W/7GMX2V7p6kDkVZDS8EFFqad7hYkGpYbwwGv5XqBY=
+			BRpxY0UoXc0CTLjFOe6Z/UhYj5v2pASK4dCdUuIqvME=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F+I8GoymPsqfZCcTYuvBPTMTfoU0V3n4rdU64pSax/I=
+			QSFrzFjMVyNoEHCZVqwcStJxzoK5Tj4aBwgQDGCzToQ=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OoER588vvQFug0+SWYtlXYzMiM+sJSIbXgF3wZVvgG0=
+			HBkV2+l1VXyNMQFfIi1EFR6fKrkjMn0SF7qhveKoHR8=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wMszNoEa+Vj5cBKHvLaxBe3k53ptO5J73dC+lQhfD4w=
+			rcFpIdW8pA25FQ1kxcP6UARlGKFYWwRaQBQdH7zxIGo=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OoER588vvQFug0+SWYtlXYzMiM+sJSIbXgF3wZVvgG0=
+			HBkV2+l1VXyNMQFfIi1EFR6fKrkjMn0SF7qhveKoHR8=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RvklYYeKe47PxFPvHxpJr6GCBf8Zyke/s6h5kCwwdOg=
+			iZobAUn5yQpYOW9Ie54D18MLUhOgPhl74RDlTtKPy7M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

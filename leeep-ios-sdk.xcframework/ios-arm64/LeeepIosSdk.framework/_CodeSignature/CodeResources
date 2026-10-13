@@ -10,27 +10,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MafRJdgXdbxqrRWc1W7GUI5VyuM=
+		mhl8pdfv/KANMm6KMRYRf2jwxEs=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		bCS1UO9fCjliuGOlOg0gMYdwN68=
+		mVznKO9WLfzxl+NapdE3aJknnvA=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Q4K3eHgI8FruNpp19ZaNzn86MGY=
+		5Arc4vEro05iPyL0hWqwLCAXFz0=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		PX2RZ2nF5PKS6IUxZ/rfgG006/Y=
+		ebWa3kTrPn0VAIs5ZhPnN7YFWmM=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Q4K3eHgI8FruNpp19ZaNzn86MGY=
+		5Arc4vEro05iPyL0hWqwLCAXFz0=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		RYNMn66NbHnQ75tdfVVjXvKx/TY=
+		wVqLUF+KTGgmHp34qJPebXWK1W8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,35 +50,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			F+I8GoymPsqfZCcTYuvBPTMTfoU0V3n4rdU64pSax/I=
+			QSFrzFjMVyNoEHCZVqwcStJxzoK5Tj4aBwgQDGCzToQ=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0zmr9GkF2DCIcoGFvlc0MKyjmPWuv5lRmUpCRtNF93Y=
+			6RQ5Gljfh4eoa8hnWwqj0SY2i0/7Xg2ikDnZ1KLdrPM=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oyc90rgdoIFDzLqSx0tA9h8ibH3QYUlXkJtSP/TTVNA=
+			nmL41jOl6w7cIoeZ4xZUQeWW/1wvdw1DSrTnfNzORhI=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0zmr9GkF2DCIcoGFvlc0MKyjmPWuv5lRmUpCRtNF93Y=
+			6RQ5Gljfh4eoa8hnWwqj0SY2i0/7Xg2ikDnZ1KLdrPM=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JIDmGNkCE9500TKXWpDQHZIoZ36yAw6aDy6PeMG3b28=
+			lSaIq49rqWyKLrf0bUzRWbZg4oZnFWOzRc6YInCjjtw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
