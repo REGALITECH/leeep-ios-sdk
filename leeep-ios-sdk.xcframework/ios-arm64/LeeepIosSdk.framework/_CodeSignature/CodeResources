@@ -12,6 +12,10 @@
 		<data>
 		mhl8pdfv/KANMm6KMRYRf2jwxEs=
 		</data>
+		<key>LICENSE</key>
+		<data>
+		HyZfCEs0Xca9FAuzgcf56YrheQc=
+		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
 		mVznKO9WLfzxl+NapdE3aJknnvA=
@@ -28,13 +32,13 @@
 		<data>
 		5Arc4vEro05iPyL0hWqwLCAXFz0=
 		</data>
-		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
-		<data>
-		wVqLUF+KTGgmHp34qJPebXWK1W8=
-		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		3W+lfvEpmZ4miNxySnpCdGJC3w4=
+		</data>
+		<key>THIRD_PARTY_NOTICES.txt</key>
+		<data>
+		lzmAbxvoNuZ2pFdQAY4eOKHjJX8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -44,6 +48,13 @@
 			<key>hash2</key>
 			<data>
 			9GHZ5brdIpW6HjVjsAeTMn4+OVG6WFB1IPzHExEAWxg=
+			</data>
+		</dict>
+		<key>LICENSE</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CaQ17Eptxd4ZFURoHTQ6/NbXyeP40VvE1TRh6OwUr2U=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -74,18 +85,18 @@
 			6RQ5Gljfh4eoa8hnWwqj0SY2i0/7Xg2ikDnZ1KLdrPM=
 			</data>
 		</dict>
-		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lSaIq49rqWyKLrf0bUzRWbZg4oZnFWOzRc6YInCjjtw=
-			</data>
-		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			ITOwDO6OnViiA8YSv0zK2Vlsz+Pi3dvD5BfK0crxkbc=
+			</data>
+		</dict>
+		<key>THIRD_PARTY_NOTICES.txt</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oxe7/dN68WsfQZYXTYKaggubqUSZpvKT9p8hdL8xW9Y=
 			</data>
 		</dict>
 	</dict>

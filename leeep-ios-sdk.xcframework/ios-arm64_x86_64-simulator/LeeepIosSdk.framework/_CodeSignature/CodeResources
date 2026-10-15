@@ -12,6 +12,10 @@
 		<data>
 		VMIToQd+Knb6DSc/tWBO4B7AzpU=
 		</data>
+		<key>LICENSE</key>
+		<data>
+		HyZfCEs0Xca9FAuzgcf56YrheQc=
+		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
 		mVznKO9WLfzxl+NapdE3aJknnvA=
@@ -27,10 +31,6 @@
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
 		YoFoeqEVB3R2il7VvOcdrX3IIYU=
-		</data>
-		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
-		<data>
-		DdC0ERp3HkneynJbUlPX7odibeQ=
 		</data>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -48,13 +48,13 @@
 		<data>
 		z0izkMzZRZyi2NaYNjjAznjIwG8=
 		</data>
-		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
-		<data>
-		udMx5jh5xeedzdkhEIz5Y8z+pZg=
-		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		3W+lfvEpmZ4miNxySnpCdGJC3w4=
+		</data>
+		<key>THIRD_PARTY_NOTICES.txt</key>
+		<data>
+		lzmAbxvoNuZ2pFdQAY4eOKHjJX8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -64,6 +64,13 @@
 			<key>hash2</key>
 			<data>
 			9GHZ5brdIpW6HjVjsAeTMn4+OVG6WFB1IPzHExEAWxg=
+			</data>
+		</dict>
+		<key>LICENSE</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CaQ17Eptxd4ZFURoHTQ6/NbXyeP40VvE1TRh6OwUr2U=
 			</data>
 		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -94,13 +101,6 @@
 			6k5XfXpY/Z9BoOrDbKlGBstv73HZlPS9v87zGZDiQek=
 			</data>
 		</dict>
-		<key>Modules/LeeepIosSdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			BRpxY0UoXc0CTLjFOe6Z/UhYj5v2pASK4dCdUuIqvME=
-			</data>
-		</dict>
 		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
@@ -129,18 +129,18 @@
 			HBkV2+l1VXyNMQFfIi1EFR6fKrkjMn0SF7qhveKoHR8=
 			</data>
 		</dict>
-		<key>Modules/LeeepIosSdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iZobAUn5yQpYOW9Ie54D18MLUhOgPhl74RDlTtKPy7M=
-			</data>
-		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			ITOwDO6OnViiA8YSv0zK2Vlsz+Pi3dvD5BfK0crxkbc=
+			</data>
+		</dict>
+		<key>THIRD_PARTY_NOTICES.txt</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oxe7/dN68WsfQZYXTYKaggubqUSZpvKT9p8hdL8xW9Y=
 			</data>
 		</dict>
 	</dict>
