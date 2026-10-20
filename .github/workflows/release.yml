@@ -1,0 +1,84 @@
+name: Publish release
+
+on:
+  pull_request:
+  push:
+    tags: ['*.*.*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing public tag (x.y.z)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ inputs.tag || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate tagged package with a simulator consumer
+        env:
+          RELEASE_TAG: ${{ inputs.tag || (github.event_name == 'push' && github.ref_name) || '0.13.1' }}
+          DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+        run: scripts/validate-release.sh "$RELEASE_TAG" "$RUNNER_TEMP/validated-release"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validated-release
+          path: ${{ runner.temp }}/validated-release
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: validate
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: validated-release
+          path: validated-release
+      - name: Publish after validation (never edit an existing release)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag=$(jq -er '.tag' validated-release/validation.json)
+          expected=$(jq -er '.sha' validated-release/validation.json)
+          [[ "$tag" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]
+          [[ "$expected" =~ ^[0-9a-f]{40}$ ]]
+          refs=$(git ls-remote --exit-code "https://github.com/$GH_REPO.git" "refs/tags/$tag" "refs/tags/$tag^{}")
+          actual=$(printf '%s\n' "$refs" | awk '$2 ~ /\^\{\}$/ {print $1; found=1} END {if (!found) print first} NR==1 {first=$1}')
+          [[ "$actual" == "$expected" ]] || { echo 'Remote tag changed after validation.' >&2; exit 1; }
+          status=$(curl --silent --show-error --max-time 30 --output existing.json --write-out '%{http_code}' \
+            -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' \
+            "https://api.github.com/repos/$GH_REPO/releases/tags/$tag")
+          case "$status" in
+            200)
+              if jq -e '.draft == false' existing.json > /dev/null; then
+                echo "Release $tag is already published; leaving it unchanged." >> "$GITHUB_STEP_SUMMARY"
+                exit 0
+              fi
+              echo 'An existing draft must be reviewed manually; it will not be edited.' >&2
+              exit 1
+              ;;
+            404) ;;
+            *) echo "Release lookup failed (HTTP $status)." >&2; exit 1 ;;
+          esac
+          gh release create "$tag" --repo "$GH_REPO" --verify-tag \
+            --title "iOS SDK $tag" --notes-file validated-release/release-notes.md
