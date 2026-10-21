@@ -10,13 +10,22 @@ https://github.com/REGALITECH/leeep-ios-sdk.git
 ```
 
 公開バージョンは [Releases](https://github.com/REGALITECH/leeep-ios-sdk/releases) を参照してください。
-例えば `0.13.1` を導入する場合、Dependency Rule を **Up to Next Minor Version**、
-開始バージョンを `0.13.1` とすると `0.13.x` が対象です。利用時のモジュール名は `LeeepIosSdk` です。
+利用時のモジュール名は `LeeepIosSdk` です。
 
-更新時はリリースノートを読み、Xcode の **File → Packages → Update to Latest Package Versions**
-を実行して、アプリのビルド・表示・リンク遷移を確認します。
-次のマイナーバージョン（例: `0.14.0`）を取り込む場合は、Dependency Rule の範囲も変更してください。
-`0.x` の更新でもAPI変更が含まれる場合があります。
+Dependency Rule によって、更新の対象になる範囲が変わります。`0.13.1` から導入する場合の例です。
+この範囲は Dependabot の更新PRと、Xcode の **Update to Latest Package Versions** の両方に適用されます。
+
+| Dependency Rule | 更新の対象 | 向いている使い方 |
+| --- | --- | --- |
+| Up to Next Major Version（Xcodeの既定） | `0.13.1` 以上 `1.0.0` 未満 | Dependabotの更新PRとアプリのCIで、マイナー更新も含めて確認してから取り込む |
+| Up to Next Minor Version | `0.13.x` のパッチのみ | マイナー更新はReleaseの通知で把握し、範囲を変更して手動で取り込む |
+| Exact Version | `0.13.1` のみ | 更新は常に手動で行う |
+
+`0.x` のマイナー更新（例: `0.13.x` → `0.14.0`）にはAPI変更が含まれる場合があります。
+取り込む前にリリースノートの移行手順を読み、アプリのビルド・表示・リンク遷移を確認してください。
+
+手動で更新する場合は、Xcode の **File → Packages → Update to Latest Package Versions** を実行します。
+範囲外のバージョン（Up to Next Minor Version での `0.14.0` など）を取り込む場合は、先に Dependency Rule の範囲を変更してください。
 
 ## 新しいバージョンの通知
 
@@ -52,9 +61,18 @@ GitHub.comのDependabotは、`Package.swift` のない `.xcodeproj` でもこれ
 詳しくは [GitHub公式のXcode対応案内](https://github.blog/changelog/2026-03-31-dependabot-now-supports-xcode-projects-using-swiftpm-with-xcodeproj-manifests/)
 を参照してください。
 
-更新候補はSPMのバージョンタグから検出され、GitHub Releaseとは別に処理されます。
-Xcodeプロジェクトでは設定済みのバージョン範囲が尊重されるため、Exact Versionや範囲外の新バージョンでは
-更新PRが出ない場合があります。ブランチ・コミット固定もバージョン更新の対象にせず、適切なバージョン範囲を設定してください。
+更新候補はSPMのバージョンタグから検出され、GitHub Releaseの公開とは別に処理されます。
+更新PRになるバージョンは、依存の管理方法によって次のように決まります。
+
+- Xcodeで管理するプロジェクト: `project.pbxproj` の Dependency Rule が尊重され、範囲内の最新版へ
+  `Package.resolved` だけが更新されます。範囲外のバージョンは更新PRになりません。
+  Up to Next Minor Version では `0.13.x` のパッチだけ、Up to Next Major Version では `1.0.0` 未満のマイナー更新も対象です。
+  Exact Version では更新PRは作られず、ブランチ・コミット指定もバージョン更新の対象になりません。
+- `Package.swift` で管理するプロジェクト: 必要に応じて `Package.swift` の指定も更新されます
+  （`exact: "0.13.0"` が `exact: "0.13.1"` に書き換わることを確認しています）。
+
+マイナー更新もDependabotで受け取る場合は、Up to Next Major Version を設定してください。
+更新PRの本文には、GitHub Releaseが公開済みであればそのリリースノートが引用されます。
 更新PRの確認とアプリのCIはお客様側で行います。PR作成だけで実機での動作確認が済むわけではありません。
 
 ## メンテナー向けリリース手順
@@ -62,8 +80,10 @@ Xcodeプロジェクトでは設定済みのバージョン範囲が尊重され
 1. 内部リポジトリでSDKをビルドして、このリポジトリのXCFrameworkを更新します。
 2. `releases/x.y.z.md` にそのバージョンの変更点、必要な移行手順、対応するPRを記載し、
    バイナリ・ドキュメントと一緒にレビューして `main` にマージします。プレースホルダーだけのノートは公開しません。
+   PRのCIで、そのPRのXCFrameworkを使った最小Simulatorアプリのビルドが成功していることを確認してからマージします。
 3. リリース対象のコミットへ `x.y.z` 形式のタグを作り、pushします。
    `v` 接頭辞、先頭ゼロ、プレリリースの接尾辞は使いません。公開済みタグは移動・上書きしません。
+   タグは1つずつpushします。一度に4つ以上のタグをpushするとGitHubがイベントを作らず、ワークフローが起動しません。
 4. [Publish release](https://github.com/REGALITECH/leeep-ios-sdk/actions/workflows/release.yml) が
    公開タグをSPMで取得し、タグのSHA、実機・Simulator用Framework、Xcode 26.6での最小Simulatorアプリのビルドを確認します。
    全て成功した場合のみ、レビュー済みノートでGitHub Releaseを公開します。
@@ -76,12 +96,19 @@ Xcodeプロジェクトでは設定済みのバージョン範囲が尊重され
 すでに公開済みのReleaseは変更しません。既存のdraftも自動では編集・公開せず、確認を要求して停止します。
 Latestには、公開済みの正式な `x.y.z` バージョンより新しいものだけを指定します。過去バージョンの後追い公開ではLatestを変更しません。
 
-PRでは、既存の公開タグ `0.13.1` に対して同じ取得・ビルド経路を検証します。PRからReleaseは公開しません。
-これはワークフローの検証用であり、新しい未タグのバイナリの受入れを代替しません。
+このワークフローや `scripts/publish-release.sh` を変更して `main` にマージした後は、Actionsの **Run workflow** から
+ブランチ `main` と公開済みの最新タグ（現時点では `0.13.1`）を指定して実行します。
+公開ジョブがSummaryに `Release x.y.z is already published; leaving it unchanged.` を出して成功すれば、
+次のリリース前に公開までの経路が動くことを確認できます。既存のReleaseは変更されません。
+
+PRでは、そのPRのheadコミットをSPMのrevision指定で取得し、タグと同じFramework確認とSimulatorアプリのビルドを行います。
+あわせて、公開済みタグ `0.13.1` に対する取得・ビルド経路も検証します。PRからReleaseは公開しません。
 ローカルで同じ検証だけを実行するには、Xcodeを選択した状態で次を実行します。
+`--revision` はGitHubへpush済みのコミットが対象です。
 
 ```sh
 scripts/validate-release.sh 0.13.1 /tmp/leeep-ios-release-validation
+scripts/validate-release.sh --revision "$(git rev-parse HEAD)" /tmp/leeep-ios-revision-validation
 ```
 
 ## ライセンス情報
