@@ -23,16 +23,23 @@ jobs:
     if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/main'
     runs-on: macos-26
     timeout-minutes: 20
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
       - name: Test release publication guards without publishing
         run: python3 scripts/test-publish-release.py
+      # Build the XCFramework under review before it is tagged and visible to SPM/Dependabot.
+      - name: Validate this pull request's package with a simulator consumer
+        if: github.event_name == 'pull_request'
+        env:
+          REVISION: ${{ github.event.pull_request.head.sha }}
+        run: scripts/validate-release.sh --revision "$REVISION" "$RUNNER_TEMP/validated-revision"
       - name: Validate tagged package with a simulator consumer
         env:
           RELEASE_TAG: ${{ inputs.tag || (github.event_name == 'push' && github.ref_name) || '0.13.1' }}
-          DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
         run: scripts/validate-release.sh "$RELEASE_TAG" "$RUNNER_TEMP/validated-release"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:

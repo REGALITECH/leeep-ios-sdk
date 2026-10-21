@@ -2,24 +2,37 @@
 set -euo pipefail
 
 # Always run this reviewed script, including when validating a historical tag.
-tag=${1:?Usage: scripts/validate-release.sh x.y.z output-directory}
-output=${2:?Output directory is required}
-[[ "$tag" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]] || {
-  echo 'Release tag must be x.y.z without a v prefix or leading zeroes.' >&2; exit 1;
-}
+# Pull requests pass --revision to validate their own XCFramework before any tag is pushed.
+# SPM fetches that commit from the public remote, so it must already be pushed there.
+# The revision mode writes no release notes or validation.json, so its output cannot be published.
+usage='Usage: scripts/validate-release.sh (x.y.z | --revision commit-sha) output-directory'
 root=$(cd "$(dirname "$0")/.." && pwd)
-notes="$root/releases/$tag.md"
-[[ -s "$notes" ]] && [[ -n "$(tr -d '[:space:]' < "$notes")" ]] || {
-  echo "Missing authored release notes: releases/$tag.md" >&2; exit 1;
-}
 remote=https://github.com/REGALITECH/leeep-ios-sdk.git
-refs=$(git ls-remote --exit-code "$remote" "refs/tags/$tag" "refs/tags/$tag^{}")
-sha=$(printf '%s\n' "$refs" | awk '$2 ~ /\^\{\}$/ {print $1; found=1} END {if (!found) print first} NR==1 {first=$1}')
-[[ "$sha" =~ ^[0-9a-f]{40}$ ]] || { echo 'Remote tag did not resolve to one SHA.' >&2; exit 1; }
+if [[ "${1:-}" == --revision ]]; then
+  tag=
+  sha=${2:?$usage}
+  output=${3:?$usage}
+  [[ "$sha" =~ ^[0-9a-f]{40}$ ]] || { echo 'Revision must be a full 40-character commit SHA.' >&2; exit 1; }
+  requirement="{kind = revision; revision = $sha; }"
+else
+  tag=${1:?$usage}
+  output=${2:?Output directory is required}
+  [[ "$tag" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]] || {
+    echo 'Release tag must be x.y.z without a v prefix or leading zeroes.' >&2; exit 1;
+  }
+  notes="$root/releases/$tag.md"
+  [[ -s "$notes" ]] && [[ -n "$(tr -d '[:space:]' < "$notes")" ]] || {
+    echo "Missing authored release notes: releases/$tag.md" >&2; exit 1;
+  }
+  refs=$(git ls-remote --exit-code "$remote" "refs/tags/$tag" "refs/tags/$tag^{}")
+  sha=$(printf '%s\n' "$refs" | awk '$2 ~ /\^\{\}$/ {print $1; found=1} END {if (!found) print first} NR==1 {first=$1}')
+  [[ "$sha" =~ ^[0-9a-f]{40}$ ]] || { echo 'Remote tag did not resolve to one SHA.' >&2; exit 1; }
+  requirement="{kind = exactVersion; version = $tag; }"
+fi
 work=$(mktemp -d)
 trap 'rm -rf "$work"' EXIT
 cp -R "$root/scripts/release-consumer/." "$work/"
-sed -i '' "s/__VERSION__/$tag/g" "$work/ReleaseSmoke.xcodeproj/project.pbxproj"
+sed -i '' "s/__REQUIREMENT__/$requirement/" "$work/ReleaseSmoke.xcodeproj/project.pbxproj"
 mkdir -p "$output"
 output=$(cd "$output" && pwd)
 xcodebuild -version
@@ -31,7 +44,9 @@ work, tag, sha = pathlib.Path(sys.argv[1]), sys.argv[2], sys.argv[3]
 resolved = work / 'ReleaseSmoke.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved'
 pins = json.loads(resolved.read_text())['pins']
 assert len(pins) == 1 and pins[0]['identity'] == 'leeep-ios-sdk', pins
-assert pins[0]['state']['version'] == tag and pins[0]['state']['revision'] == sha, pins
+# A revision pin has no version, so only tag validation compares it.
+state = pins[0]['state']
+assert state['revision'] == sha and (not tag or state.get('version') == tag), pins
 checkout = work / 'packages/checkouts/leeep-ios-sdk'
 assert subprocess.check_output(['git', '-C', str(checkout), 'rev-parse', 'HEAD'], text=True).strip() == sha
 bundle = checkout / 'leeep-ios-sdk.xcframework'
@@ -53,10 +68,12 @@ xcodebuild -project "$work/ReleaseSmoke.xcodeproj" -scheme ReleaseSmoke \
   -derivedDataPath "$work/derived" -clonedSourcePackagesDirPath "$work/packages" \
   -disableAutomaticPackageResolution -onlyUsePackageVersionsFromResolvedFile \
   CODE_SIGNING_ALLOWED=NO build
-cp "$notes" "$output/release-notes.md"
 cp "$work/ReleaseSmoke.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" "$output/Package.resolved"
-python3 - "$output/validation.json" "$tag" "$sha" <<'PY'
+if [[ -n "$tag" ]]; then
+  cp "$notes" "$output/release-notes.md"
+  python3 - "$output/validation.json" "$tag" "$sha" <<'PY'
 import json, pathlib, sys
 pathlib.Path(sys.argv[1]).write_text(json.dumps({'tag': sys.argv[2], 'sha': sys.argv[3]}, indent=2) + '\n')
 PY
-printf 'Validated %s at %s\n' "$tag" "$sha"
+fi
+printf 'Validated %s at %s\n' "${tag:-revision}" "$sha"
