@@ -97,12 +97,15 @@ GitHub.comのDependabotは、`Package.swift` のない `.xcodeproj` でもこれ
 Latestには、公開済みの正式な `x.y.z` バージョンより新しいものだけを指定します。過去バージョンの後追い公開ではLatestを変更しません。
 
 このワークフローや `scripts/publish-release.sh` を変更して `main` にマージした後は、Actionsの **Run workflow** から
-ブランチ `main` と公開済みの最新タグ（現時点では `0.13.1`）を指定して実行します。
+ブランチ `main` と公開済みのタグ（例: `0.13.1`）を指定して実行します。
 公開ジョブがSummaryに `Release x.y.z is already published; leaving it unchanged.` を出して成功すれば、
 次のリリース前に公開までの経路が動くことを確認できます。既存のReleaseは変更されません。
 
 PRでは、そのPRのheadコミットをSPMのrevision指定で取得し、タグと同じFramework確認とSimulatorアプリのビルドを行います。
 あわせて、公開済みタグ `0.13.1` に対する取得・ビルド経路も検証します。PRからReleaseは公開しません。
+`0.13.1` はワークフロー自体の回帰確認のために固定しており、リリースごとに更新する必要はありません。
+検証に使うXcodeを変える場合は、`.github/workflows/release.yml` の `DEVELOPER_DIR` と、このREADMEのXcodeのバージョンの記述を変更します。
+ランナーに入っているXcodeは [actions/runner-images](https://github.com/actions/runner-images) の macos-26 の一覧で確認できます。
 ローカルで同じ検証だけを実行するには、Xcodeを選択した状態で次を実行します。
 `--revision` はGitHubへpush済みのコミットが対象です。
 
