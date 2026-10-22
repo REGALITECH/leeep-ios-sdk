@@ -1,6 +1,6 @@
 # LEEEP iOS SDK
 
-## インストール・更新
+## 導入と更新
 
 Xcode の **File → Add Package Dependencies…** で、次の公開URLを指定し、
 `leeep-ios-sdk` をアプリのターゲットへ追加します。
@@ -22,24 +22,30 @@ Dependency Rule によって、更新の対象になる範囲が変わります�
 | Exact Version | `0.13.1` のみ | 更新は常に手動で行う |
 
 `0.x` のマイナー更新（例: `0.13.x` → `0.14.0`）にはAPI変更が含まれる場合があります。
-取り込む前にリリースノートの移行手順を読み、アプリのビルド・表示・リンク遷移を確認してください。
+更新時は [Releases](https://github.com/REGALITECH/leeep-ios-sdk/releases) で、現在のバージョンから採用するバージョンまでの各版の変更内容・更新時の対応を読み、アプリのビルド・表示・リンク遷移を確認してください。
+リポジトリの `releases/` にあるファイルは公開前の原稿を含むため、ファイルがあるだけでは配布確認・GitHub Release 公開済みを意味しません。
 
 手動で更新する場合は、Xcode の **File → Packages → Update to Latest Package Versions** を実行します。
 範囲外のバージョン（Up to Next Minor Version での `0.14.0` など）を取り込む場合は、先に Dependency Rule の範囲を変更してください。
 
-## 新しいバージョンの通知
+## 更新通知を受け取る
 
-### GitHub Release のメール通知
+### Release の通知メール
 
-このリポジトリで **Watch → Custom → Releases → Apply** を選択します。
-GitHub の **Settings → Notifications** で Watching の通知先に **Email** を含め、
-送信先メールアドレスを確認してください。GitHub Release 公開時にGitHubから通知されます。
-タグのpushだけではReleaseの通知にはなりません。
+次の設定をすると、GitHub Release が公開されたときに、変更内容と更新時の対応がメールで届きます。
 
-### お客様のアプリで Dependabot の更新PRを受け取る
+1. このリポジトリ右上の **Watch → Custom → Releases → Apply** を選択します。
+2. GitHub の[通知設定](https://github.com/settings/notifications)の **Watching** で、通知先（Notify me）に **Email** が含まれていることを確認します。
+   **On GitHub** だけの場合は GitHub 上の通知だけになり、メールは届きません。
+3. 同じ画面の **Default notifications email** が、受け取りたいメールアドレスになっていることを確認します。
+   組織ごとに送信先を変えている場合は、**Custom routing** の設定も確認してください。
 
-お客様のGitHubリポジトリのデフォルトブランチへ `.github/dependabot.yml` を追加します。
-以下はXcodeプロジェクトがリポジトリ直下にある例です。
+通知の届き方は各アカウントの設定に従います。タグの追加だけでは Release の通知にはなりません。
+
+### Dependabot の更新PR
+
+利用アプリで更新PRを受け取りたい場合は、そのアプリのリポジトリのデフォルトブランチに `.github/dependabot.yml` を設定します。
+次はリポジトリ直下に Xcode プロジェクトがある場合の例です。
 
 ```yaml
 version: 2
@@ -48,10 +54,12 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    allow:
+      - dependency-name: "github.com/regalitech/leeep-ios-sdk"
 ```
 
 `directory` は `.xcodeproj` または `Package.swift` があるディレクトリに合わせてください。
-既に設定がある場合は、その `updates` に統合します。この例は同じSwiftプロジェクトの他の依存も更新対象です。
+既存の Dependabot 設定があれば、その `updates` に統合し、同じ ecosystem/directory の設定を重複させないでください。既に他の依存も更新している場合、この `allow` で対象を SDK だけに絞らないよう既存の方針を維持してください。
 この公開SDKの取得に、専用のPATやDependabot用の認証情報は不要です。
 
 Xcode管理のプロジェクトでは `project.pbxproj` に加え、Xcodeで依存を解決した後の
@@ -73,46 +81,14 @@ GitHub.comのDependabotは、`Package.swift` のない `.xcodeproj` でもこれ
 
 マイナー更新もDependabotで受け取る場合は、Up to Next Major Version を設定してください。
 更新PRの本文には、GitHub Releaseが公開済みであればそのリリースノートが引用されます。
-更新PRの確認とアプリのCIはお客様側で行います。PR作成だけで実機での動作確認が済むわけではありません。
+GitHub Release 未公開のタグが候補になる場合があり、PR の作成時期はチェックのスケジュールにも従います。
+自動マージは設定せず、Release が公開されていることと変更内容を確認し、アプリのビルド・表示・リンク遷移を確かめてから更新してください。
 
-## メンテナー向けリリース手順
+参考: [GitHub の通知設定](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications)、[Dependabot 設定](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference)。
 
-1. 内部リポジトリでSDKをビルドして、このリポジトリのXCFrameworkを更新します。
-2. `releases/x.y.z.md` にそのバージョンの変更点、必要な移行手順、対応するPRを記載し、
-   バイナリ・ドキュメントと一緒にレビューして `main` にマージします。プレースホルダーだけのノートは公開しません。
-   PRのCIで、そのPRのXCFrameworkを使った最小Simulatorアプリのビルドが成功していることを確認してからマージします。
-3. リリース対象のコミットへ `x.y.z` 形式のタグを作り、pushします。
-   `v` 接頭辞、先頭ゼロ、プレリリースの接尾辞は使いません。公開済みタグは移動・上書きしません。
-   タグは1つずつpushします。一度に4つ以上のタグをpushするとGitHubがイベントを作らず、ワークフローが起動しません。
-4. [Publish release](https://github.com/REGALITECH/leeep-ios-sdk/actions/workflows/release.yml) が
-   公開タグをSPMで取得し、タグのSHA、実機・Simulator用Framework、Xcode 26.6での最小Simulatorアプリのビルドを確認します。
-   全て成功した場合のみ、レビュー済みノートでGitHub Releaseを公開します。
-5. Actionsの結果とReleaseを確認します。失敗時にはReleaseは公開されませんが、push済みタグ自体はSPMから取得可能です。
-   必要に応じてノートやワークフローを修正し、同じタグを再検証します。バイナリを修正する場合は新しいバージョンを作成します。
+## リリース担当者向け手順
 
-タグpushの失敗した実行は再実行できます。過去のタグを後から告知する場合は、現在の `main` に対応する
-`releases/x.y.z.md` をレビューして追加した上で、Actionsの **Run workflow** からブランチ `main` と対象のタグを指定します。
-検証スクリプトとノートはその実行のコミットを使い、バイナリは指定タグのSHAに固定します。
-すでに公開済みのReleaseは変更しません。既存のdraftも自動では編集・公開せず、確認を要求して停止します。
-Latestには、公開済みの正式な `x.y.z` バージョンより新しいものだけを指定します。過去バージョンの後追い公開ではLatestを変更しません。
-
-このワークフローや `scripts/publish-release.sh` を変更して `main` にマージした後は、Actionsの **Run workflow** から
-ブランチ `main` と公開済みのタグ（例: `0.13.1`）を指定して実行します。
-公開ジョブがSummaryに `Release x.y.z is already published; leaving it unchanged.` を出して成功すれば、
-次のリリース前に公開までの経路が動くことを確認できます。既存のReleaseは変更されません。
-
-PRでは、そのPRのheadコミットをSPMのrevision指定で取得し、タグと同じFramework確認とSimulatorアプリのビルドを行います。
-あわせて、公開済みタグ `0.13.1` に対する取得・ビルド経路も検証します。PRからReleaseは公開しません。
-`0.13.1` はワークフロー自体の回帰確認のために固定しており、リリースごとに更新する必要はありません。
-検証に使うXcodeを変える場合は、`.github/workflows/release.yml` の `DEVELOPER_DIR` と、このREADMEのXcodeのバージョンの記述を変更します。
-ランナーに入っているXcodeは [actions/runner-images](https://github.com/actions/runner-images) の macos-26 の一覧で確認できます。
-ローカルで同じ検証だけを実行するには、Xcodeを選択した状態で次を実行します。
-`--revision` はGitHubへpush済みのコミットが対象です。
-
-```sh
-scripts/validate-release.sh 0.13.1 /tmp/leeep-ios-release-validation
-scripts/validate-release.sh --revision "$(git rev-parse HEAD)" /tmp/leeep-ios-revision-validation
-```
+SDK の配布と GitHub Release の公開手順は [RELEASING.md](RELEASING.md) にまとめています。
 
 ## ライセンス情報
 
